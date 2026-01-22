@@ -41,9 +41,9 @@ body {
 
 .celular {
   position: absolute;
-  width: 120px;
-  top: 48%;     /* ajuste fino visual */
-  left: 62%;
+  width: 420px;
+  top: 20%;     /* ajuste fino visual */
+  left: 20%;
   animation: vibrar 0.1s infinite;
 }
 
@@ -57,11 +57,11 @@ body {
 
 .mao {
   position: absolute;
-  width: 140px;
-  top: 70%;
-  left: 30%;
+  width: 230px;
+  top: 10%;
+  left: 38%;
   transform: scale(0.7);
-  transform-origin: center;
+  transform-origin: left;
   transition: transform 0.8s ease;
   cursor: pointer;
 }
