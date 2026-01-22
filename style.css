@@ -43,7 +43,7 @@ body {
   position: absolute;
   width: 420px;
   top: 20%;     /* ajuste fino visual */
-  left: 8%;
+  left: 1%;
   animation: vibrar 0.1s infinite;
 }
 
