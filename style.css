@@ -1,20 +1,27 @@
-body {
+/* RESET */
+* {
   margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* FUNDO */
+body {
   background: #000;
   overflow-y: scroll;
 }
 
-/* container da webcomic */
+/* CONTAINER DA WEBCOMIC */
 #comic {
   display: flex;
   flex-direction: column;
   align-items: center;
 }
 
-/* cada página */
+/* PÁGINAS */
 .pagina {
   width: 100%;
-  max-width: 700px;   /* 👈 CONTROLA A QUALIDADE NO PC */
+  max-width: 800px;   /* 👈 LIMITE REAL NO PC */
   height: auto;
   display: block;
 }
