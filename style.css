@@ -1,17 +1,11 @@
-body {
-  margin: 0;
-  background: #000;
-  font-family: sans-serif;
-  overflow-y: auto; /* libera scroll */
-}
-
-#comic {
-  width: 100%;
-  max-width: 900px;
-  margin: 0 auto;
-}
-
 .pagina {
+  display: none;
   width: 100%;
+  opacity: 0;
+  transition: opacity 0.8s ease;
+}
+
+.pagina.ativa {
   display: block;
+  opacity: 1;
 }
