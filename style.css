@@ -1,1 +1,17 @@
+body {
+  margin: 0;
+  background: #000;
+  font-family: sans-serif;
+  overflow-y: auto; /* libera scroll */
+}
 
+#comic {
+  width: 100%;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.pagina {
+  width: 100%;
+  display: block;
+}
