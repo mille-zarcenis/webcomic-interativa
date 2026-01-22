@@ -1,25 +1,30 @@
 const paginas = document.querySelectorAll(".pagina");
+let atual = 0;
 
-const ultimaPagina = paginas[paginas.length - 1];
+function mostrarPagina(index) {
+  paginas.forEach(p => {
+    p.classList.remove("ativa");
+    p.style.display = "none";
+  });
 
-const observer = new IntersectionObserver(
-  (entries) => {
-    entries.forEach(entry => {
-      if (entry.isIntersecting) {
-        // quando a última imagem aparece
-        setTimeout(() => {
-          window.scrollTo({
-            top: 0,
-            behavior: "smooth"
-          });
-        }, 800);
-      }
-    });
-  },
-  {
-    threshold: 0.6
-  }
-);
+  paginas[index].style.display = "block";
+  setTimeout(() => {
+    paginas[index].classList.add("ativa");
+  }, 50);
+}
 
-observer.observe(ultimaPagina);
+mostrarPagina(atual);
 
+document.addEventListener("click", () => {
+  paginas[atual].classList.remove("ativa");
+
+  setTimeout(() => {
+    atual++;
+
+    if (atual >= paginas.length) {
+      atual = 0; // depois podemos mudar isso 😉
+    }
+
+    mostrarPagina(atual);
+  }, 800);
+});
