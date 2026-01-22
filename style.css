@@ -14,7 +14,7 @@ body {
 /* cada página */
 .pagina {
   width: 100%;
-  max-width: 800px;   /* 👈 CONTROLA A QUALIDADE NO PC */
+  max-width: 700px;   /* 👈 CONTROLA A QUALIDADE NO PC */
   height: auto;
   display: block;
 }
