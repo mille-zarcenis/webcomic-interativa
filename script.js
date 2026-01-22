@@ -1,31 +1,11 @@
 const comic = document.getElementById("comic");
+const paginasLoop = Array.from(document.querySelectorAll(".loop"));
 
-let scrollTimeout = null;
+const repeticoes = 5; // 🔁 MUDE AQUI
 
-window.addEventListener("scroll", () => {
-  if (scrollTimeout) return;
-
-  scrollTimeout = setTimeout(() => {
-    const scrollTop = window.scrollY;
-    const scrollHeight = document.body.scrollHeight;
-    const windowHeight = window.innerHeight;
-
-    // Se chegou no FINAL
-    if (scrollTop + windowHeight >= scrollHeight - 5) {
-      window.scrollTo({
-        top: 1,
-        behavior: "smooth"
-      });
-    }
-
-    // Se voltou para o TOPO
-    if (scrollTop <= 0) {
-      window.scrollTo({
-        top: scrollHeight - windowHeight - 1,
-        behavior: "smooth"
-      });
-    }
-
-    scrollTimeout = null;
-  }, 100);
-});
+for (let i = 0; i < repeticoes; i++) {
+  paginasLoop.forEach(pagina => {
+    const clone = pagina.cloneNode(true);
+    comic.appendChild(clone);
+  });
+}
