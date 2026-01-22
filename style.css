@@ -1,11 +1,15 @@
-.pagina {
-  display: none;
-  width: 100%;
-  opacity: 0;
-  transition: opacity 0.8s ease;
+body {
+  margin: 0;
+  overflow-y: scroll;
+  background: #000;
 }
 
-.pagina.ativa {
+#comic {
+  display: flex;
+  flex-direction: column;
+}
+
+.pagina {
+  width: 100%;
   display: block;
-  opacity: 1;
 }
