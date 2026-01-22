@@ -1,30 +1,31 @@
-const paginas = document.querySelectorAll(".pagina");
-let atual = 0;
+const comic = document.getElementById("comic");
 
-function mostrarPagina(index) {
-  paginas.forEach(p => {
-    p.classList.remove("ativa");
-    p.style.display = "none";
-  });
+let scrollTimeout = null;
 
-  paginas[index].style.display = "block";
-  setTimeout(() => {
-    paginas[index].classList.add("ativa");
-  }, 50);
-}
+window.addEventListener("scroll", () => {
+  if (scrollTimeout) return;
 
-mostrarPagina(atual);
+  scrollTimeout = setTimeout(() => {
+    const scrollTop = window.scrollY;
+    const scrollHeight = document.body.scrollHeight;
+    const windowHeight = window.innerHeight;
 
-document.addEventListener("click", () => {
-  paginas[atual].classList.remove("ativa");
-
-  setTimeout(() => {
-    atual++;
-
-    if (atual >= paginas.length) {
-      atual = 0; // depois podemos mudar isso 😉
+    // Se chegou no FINAL
+    if (scrollTop + windowHeight >= scrollHeight - 5) {
+      window.scrollTo({
+        top: 1,
+        behavior: "smooth"
+      });
     }
 
-    mostrarPagina(atual);
-  }, 800);
+    // Se voltou para o TOPO
+    if (scrollTop <= 0) {
+      window.scrollTo({
+        top: scrollHeight - windowHeight - 1,
+        behavior: "smooth"
+      });
+    }
+
+    scrollTimeout = null;
+  }, 100);
 });
