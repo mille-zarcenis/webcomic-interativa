@@ -42,7 +42,7 @@ body {
 .celular {
   position: absolute;
   width: 420px;
-  top: 20%;     /* ajuste fino visual */
+  top: 22%;     /* ajuste fino visual */
   left: 1%;
   animation: vibrar 0.1s infinite;
 }
@@ -58,8 +58,8 @@ body {
 .mao {
   position: absolute;
   width: 230px;
-  top: 15%;
-  left: 44%;
+  top: 14%;
+  left: 30%;
   transform: scale(0.7);
   transform-origin: right;
   transition: transform 0.8s ease;
