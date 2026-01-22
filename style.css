@@ -43,7 +43,7 @@ body {
   position: absolute;
   width: 420px;
   top: 20%;     /* ajuste fino visual */
-  left: 20%;
+  left: 14%;
   animation: vibrar 0.1s infinite;
 }
 
@@ -58,10 +58,10 @@ body {
 .mao {
   position: absolute;
   width: 230px;
-  top: 10%;
-  left: 38%;
+  top: 15%;
+  left: 44%;
   transform: scale(0.7);
-  transform-origin: left;
+  transform-origin: right;
   transition: transform 0.8s ease;
   cursor: pointer;
 }
